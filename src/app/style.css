@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Helvetica, sans-serif
+}
+
+.next-error-h1 {
+    border-right: 1px solid #594545 !important;
+}
+
+#clockpicker {
+    all: none;
+}
