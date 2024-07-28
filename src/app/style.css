@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-    font-family: Helvetica, sans-serif
+    font-family: Helvetica;
 }
 
 .next-error-h1 {
