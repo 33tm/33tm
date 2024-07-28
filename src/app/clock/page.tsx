@@ -5,7 +5,7 @@ export default () => {
             <img
                 className="m-auto"
                 src={`https://vps.tttm.us/clock?timestamp=${Date.now() / 1000}`}
-                alt="clock"
+                alt="Unable to load clock -- my ssl certificate probably expired ://"
             />
         </div>
     )

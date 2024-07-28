@@ -6,6 +6,11 @@
     font-family: Helvetica;
 }
 
+:root {
+    --background: #F3EEEA;
+    --accent: #594545;
+}
+
 .next-error-h1 {
-    border-right: 1px solid #594545 !important;
+    border-right: 1px solid var(--accent) !important;
 }
