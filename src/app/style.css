@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    font-family: Helvetica;
-}
-
 :root {
     --background: #F3EEEA;
     --accent: #594545;
