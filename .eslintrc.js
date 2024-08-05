@@ -1,5 +1,5 @@
-{
-    "extends": "next",
+module.exports = {
+    "extends": "next/core-web-vitals",
     "rules": {
         "indent": [
             "error",
@@ -7,7 +7,7 @@
         ],
         "linebreak-style": [
             "error",
-            "unix"
+            process.platform === "win32" ? "windows" : "unix"
         ],
         "quotes": [
             "error",
