@@ -5,6 +5,7 @@ export default {
     images: {
         unoptimized: true
     },
+    missingSuspenseWithCSRBailout: false,
     redirects: () => [
         {
             source: "/callback/:path*",
