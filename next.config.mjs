@@ -13,11 +13,12 @@ export default {
             source: "/callback/:path*",
             destination: "http://localhost:3000/:path*",
             permanent: false
-        },
+        }
+    ],
+    rewrites: () => [
         {
             source: "/badapple",
-            destination: "https://cdn.tttm.us/badapple.html",
-            permanent: true
+            destination: "https://cdn.tttm.us/badapple.html"
         }
     ]
 }
