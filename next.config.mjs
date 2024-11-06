@@ -13,6 +13,11 @@ export default {
             source: "/callback/:path*",
             destination: "http://localhost:3000/:path*",
             permanent: false
+        },
+        {
+            source: "/securecallback/:path*",
+            destination: "https://localhost:3000/:path*",
+            permanent: false
         }
     ],
     rewrites: () => [
