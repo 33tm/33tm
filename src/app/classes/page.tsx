@@ -2,20 +2,18 @@
 
 import { useSearchParams } from "next/navigation"
 import { useEffect, useState } from "react"
-import { CgSpinner } from "react-icons/cg"
+
 import redirect from "@/redirect"
 
-export default () => {
+import { CgSpinner } from "react-icons/cg"
+
+export default function Classes() {
     const params = useSearchParams()
     const [error, setError] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(false)
     const [classes, setClasses] = useState()
 
     const key = params.get("oauth_token")
-    if (!key) {
-        redirect("/")
-        return
-    }
 
     useEffect(() => {
         if (!key) return
@@ -35,22 +33,29 @@ export default () => {
         })
     }, [key])
 
-    if (error) return (
-        <div className="flex h-[calc(100vh-2rem)]">
-            <p className="m-auto text-2xl font-semibold">
-                {error}
-            </p>
-        </div>
-    )
+    if (!key)
+        redirect("/")
 
-    if (loading || !classes) return (
-        <div className="flex h-[calc(100vh-2rem)]">
-            <CgSpinner className="m-auto animate-spin text-4xl" />
-        </div>
-    )
+    if (error) {
+        return (
+            <div className="flex h-full">
+                <p className="m-auto text-2xl font-semibold">
+                    {error}
+                </p>
+            </div>
+        )
+    }
+
+    if (loading || !classes) {
+        return (
+            <div className="flex h-full">
+                <CgSpinner className="m-auto animate-spin text-4xl" />
+            </div>
+        )
+    }
 
     return (
-        <div className="flex h-[calc(100vh-2rem)]">
+        <div className="flex h-full">
             <div className="m-auto text-center space-y-2">
                 <p>Your schedule was detected as:</p>
                 <br />

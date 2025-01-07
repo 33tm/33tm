@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 
 export default {
-    reactStrictMode: false,
     images: {
         unoptimized: true
-    },
-    experimental: {
-        missingSuspenseWithCSRBailout: false
     },
     redirects: () => [
         {
@@ -21,7 +17,8 @@ export default {
         },
         {
             source: "/badapple",
-            destination: "https://cdn.tttm.us/badapple.html"
+            destination: "https://cdn.tttm.us/badapple.html",
+            permanent: false
         }
     ]
 }

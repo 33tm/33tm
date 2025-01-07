@@ -21,7 +21,6 @@ module.exports = {
             "error",
             "never"
         ],
-        "import/no-anonymous-default-export": "off",
-        "react/display-name": "off"
+        "import/no-anonymous-default-export": "off"
     }
 }

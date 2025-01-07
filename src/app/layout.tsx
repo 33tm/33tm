@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "github.com/33tm"
 }
 
-export default ({ children }: Readonly<{ children: React.ReactNode }>) => {
+export default function Layout({ children }: Readonly<{ children: React.ReactNode }>) {
     return (
         <html lang="en">
             <body className={`${inter.className} m-4 h-[calc(100dvh-2rem)] outline outline-4 bg-background text-accent`}>
