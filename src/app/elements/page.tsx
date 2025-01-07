@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6"
 
 import defaultElements from "./elements.json"
 
-export default () => {
+export default function Elements() {
     const [state, setState] = useState<"config" | "start">("config")
     const [elements, setElements] = useState(defaultElements)
     const [config, setConfig] = useState<{

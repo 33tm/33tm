@@ -2,8 +2,6 @@
 
 import Link from "next/link"
 import { useState, FormEvent } from "react"
-
-import { FaGithub, FaInstagram, FaXTwitter } from "react-icons/fa6"
 import { CgSpinner } from "react-icons/cg"
 
 export default function Parrot() {
