@@ -9,6 +9,7 @@ export default function Classes({ key }: { key: string }) {
     const [classes, setClasses] = useState()
 
     useEffect(() => {
+        if (!key) return
         setLoading(true)
         fetch(process.env.NEXT_PUBLIC_BOT_URL!, {
             method: "POST",
